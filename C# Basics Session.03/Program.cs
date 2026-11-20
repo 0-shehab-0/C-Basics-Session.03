@@ -54,19 +54,28 @@
             // "Untitled" if title is null.Then use ??= to assign title
             // the value "Untitled" only if it's still null.
 
-            Book? book = null;
+            //Book? book = null;
 
-            string? title = book?.Title;
+            //string? title = book?.Title;
 
-            Console.WriteLine(title ?? "Untitled");
+            //Console.WriteLine(title ?? "Untitled");
 
-            title ??= "Untitled";
+            //title ??= "Untitled";
 
-            Console.WriteLine(title);
+            //Console.WriteLine(title);
 
 
             #endregion
 
+            #region Quistion 15 Ass 1
+            // Given string? name = "Ahmed"; (you are sure it's not null here),
+            // assign it to a non-nullable string confirmedName using the ! operator.
+
+            string? name = "Ahmed";
+
+            string confirmedName = name!;
+
+            #endregion
 
 
 
