@@ -145,14 +145,31 @@ namespace C__Basics_Session._03
             //Pages: 464" using the + operator. 
 
 
+            //string title = "Clean Code";
+            //int pages = 464;
+
+            //string result = "Book: " + title + ", Pages: " + pages;
+
+            //Console.WriteLine(result);
+
+            #endregion
+
+            #region Quistion 6
+            //Build the same sentence as above, but using string interpolation ($"...").
+
             string title = "Clean Code";
             int pages = 464;
 
-            string result = "Book: " + title + ", Pages: " + pages;
+            string result = $"Book: {title}, Pages: {pages}";
 
             Console.WriteLine(result);
 
             #endregion
+
+
+
+
+
         }
 
     }
