@@ -2,6 +2,14 @@
 {
     internal class Program
     {
+
+        class Book
+        {
+            public string Title = "Name";
+            public int Pages = 100;
+        }
+
+
         static void Main(string[] args)
         {
             #region quistion 11 ass 1
@@ -22,12 +30,24 @@
             #region Quistion 12 Ass 1
             //Declare a string? reviewer = null;. Print whether it is null.
 
-            string? reviewer = null;
+            //string? reviewer = null;
 
-            Console.WriteLine(reviewer == null);
+            //Console.WriteLine(reviewer == null);
 
             #endregion
 
+            #region Quiston 13 Ass 1
+            //Declare a Book? book = null;. Use ?. to safely read book.
+            //Title without crashing the program, and print the result.
+
+
+
+            Book? book = null;
+
+            Console.WriteLine(book?.Title);
+
+
+            #endregion
 
         }
     }
