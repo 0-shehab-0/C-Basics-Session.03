@@ -1,4 +1,6 @@
-﻿namespace C__Basics_Session._03
+﻿using System.Security.Cryptography;
+
+namespace C__Basics_Session._03
 {
     internal class Program
     {
@@ -71,14 +73,27 @@
             // Given string? name = "Ahmed"; (you are sure it's not null here),
             // assign it to a non-nullable string confirmedName using the ! operator.
 
-            string? name = "Ahmed";
+            //string? name = "Ahmed";
 
-            string confirmedName = name!;
+            //string confirmedName = name!;
 
             #endregion
 
 
+            #region Quistion 1 
+            //Declare string title = "clean code";. Call title.
+            //ToUpper() and store it in a new variable upperTitle. Print 
+            //both title and upperTitle to show that title did not change.
 
+            string title = "clean code";
+
+            string upperTitle = title.ToUpper();
+
+            Console.WriteLine(title);
+            Console.WriteLine(upperTitle);
+
+
+            #endregion
 
 
         }
