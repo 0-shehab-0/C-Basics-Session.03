@@ -3,6 +3,7 @@ using System;
 using System.Security.Cryptography;
 using System.Text;
 using System.Net.NetworkInformation;
+using System.Runtime.Intrinsics.X86;
 
 namespace C__Basics_Session._03
 {
@@ -324,20 +325,44 @@ namespace C__Basics_Session._03
             //Using the same books array, print every title except "The Pragmatic Programmer" (skip it with 
             //continue, don't stop the loop).
 
-            string[] books = { "Clean Code", "The Pragmatic Programmer", "Refactoring" };
+            //string[] books = { "Clean Code", "The Pragmatic Programmer", "Refactoring" };
 
-            foreach (string book in books)
-            {
-                if (book == "The Pragmatic Programmer")
-                {
-                    continue;
-                }
+            //foreach (string book in books)
+            //{
+            //    if (book == "The Pragmatic Programmer")
+            //    {
+            //        continue;
+            //    }
 
-                Console.WriteLine(book);
-            }
+            //    Console.WriteLine(book);
+            //}
 
 
             #endregion
+
+            #region Quistion 18
+            //Write a method PrintFirstBook() that prints the first book in the books array. If the array is empty, 
+            //use return to exit the method early instead of printing anything.
+
+            string[] books = { "Clean Code", "The Pragmatic Programmer", "Refactoring" };
+
+            void PrintFirstBook()
+            {
+                if (books.Length == 0)
+                {
+                    return;
+                }
+
+                Console.WriteLine(books[0]);
+            }
+
+            PrintFirstBook();
+
+            #endregion
+
+
+
+
 
 
         }
