@@ -250,16 +250,30 @@ namespace C__Basics_Session._03
             //Given string[] books = { "Clean Code", "The Pragmatic Programmer", "Refactoring" };, use a for loop 
             //to print each book with its position number, like 1.Clean Code.
 
-            string[] books = { "Clean Code", "The Pragmatic Programmer", "Refactoring" };
+            //string[] books = { "Clean Code", "The Pragmatic Programmer", "Refactoring" };
 
-            for (int i = 0; i < books.Length; i++)
-            {
-                Console.WriteLine((i + 1) + ". " + books[i]);
-            }
+            //for (int i = 0; i < books.Length; i++)
+            //{
+            //    Console.WriteLine((i + 1) + ". " + books[i]);
+            //}
+
 
             #endregion
 
+            #region Quistion 14
+            //Using the same books array, use a while loop to print every book title.
 
+            string[] books = { "Clean Code", "The Pragmatic Programmer", "Refactoring" };
+
+            int i = 0;
+
+            while (i < books.Length)
+            {
+                Console.WriteLine(books[i]);
+                i++;
+            }
+
+            #endregion
 
 
 
