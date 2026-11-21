@@ -1,10 +1,372 @@
-﻿namespace C__Basics_Session._03
+﻿using System.Drawing;
+using System;
+using System.Security.Cryptography;
+using System.Text;
+using System.Net.NetworkInformation;
+using System.Runtime.Intrinsics.X86;
+
+namespace C__Basics_Session._03
 {
     internal class Program
     {
+
+        class Book
+        {
+            public string Title = "Name";
+            public int Pages = 100;
+        }
+
+
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            #region quistion 11 ass 1
+            //Declare an int? year = null;. Print whether it has a value,
+            //then assign it 2023 and print its value.
+
+            //int? year = null;
+
+            //Console.WriteLine(year.HasValue);
+
+            //year = 2023;
+
+            //Console.WriteLine(year);
+
+
+            #endregion
+
+            #region Quistion 12 Ass 1
+            //Declare a string? reviewer = null;. Print whether it is null.
+
+            //string? reviewer = null;
+
+            //Console.WriteLine(reviewer == null);
+
+            #endregion
+
+            #region Quiston 13 Ass 1
+            //Declare a Book? book = null;. Use ?. to safely read book.
+            //Title without crashing the program, and print the result.
+
+
+
+            //Book? book = null;
+
+            //Console.WriteLine(book?.Title);
+
+
+            #endregion
+
+            #region Quistion 14 Ass 1
+            // Using title from the previous question, use ?? to print
+            // "Untitled" if title is null.Then use ??= to assign title
+            // the value "Untitled" only if it's still null.
+
+            //Book? book = null;
+
+            //string? title = book?.Title;
+
+            //Console.WriteLine(title ?? "Untitled");
+
+            //title ??= "Untitled";
+
+            //Console.WriteLine(title);
+
+
+            #endregion
+
+            #region Quistion 15 Ass 1
+            // Given string? name = "Ahmed"; (you are sure it's not null here),
+            // assign it to a non-nullable string confirmedName using the ! operator.
+
+            //string? name = "Ahmed";
+
+            //string confirmedName = name!;
+
+            #endregion
+
+
+            #region Quistion 1 
+            //Declare string title = "clean code";. Call title.
+            //ToUpper() and store it in a new variable upperTitle. Print 
+            //both title and upperTitle to show that title did not change.
+
+            //string title = "clean code";
+
+            //string upperTitle = title.ToUpper();
+
+            //Console.WriteLine(title);
+            //Console.WriteLine(upperTitle);
+
+
+            #endregion
+
+            #region Quistion 2
+            //Declare two separate string variables, both set to the literal "Clean Code". Use ReferenceEquals() 
+            //to check if they point to the same object in memory.
+
+            //string str1 = "Clean Code";
+            //string str2 = "Clean Code";
+
+            //Console.WriteLine(string.ReferenceEquals(str1, str2));
+
+            #endregion
+
+            #region Quistion 3
+            //Create a StringBuilder, Append() the text "Book List", then Append() " - Updated" onto the same 
+            //object.Print the final result.
+
+            //StringBuilder sb = new StringBuilder();
+
+            //sb.Append("Book List");
+            //sb.Append(" - Updated");
+
+            //Console.WriteLine(sb);
+
+            #endregion
+
+            #region Quistion 4
+            //Using the StringBuilder from the question above,
+            //use Replace() to change "Book List" into "Library". 
+            //Print the result.
+
+            //StringBuilder sb = new StringBuilder();
+
+            //sb.Append("Book List");
+            //sb.Append(" - Updated");
+
+            //sb.Replace("Book List", "Library");
+
+            //Console.WriteLine(sb);
+
+
+            #endregion
+
+            #region Quistion 5
+            //Given string title = "Clean Code"; and int pages = 464;, build the sentence "Book: Clean Code, 
+            //Pages: 464" using the + operator. 
+
+
+            //string title = "Clean Code";
+            //int pages = 464;
+
+            //string result = "Book: " + title + ", Pages: " + pages;
+
+            //Console.WriteLine(result);
+
+            #endregion
+
+            #region Quistion 6
+            //Build the same sentence as above, but using string interpolation ($"...").
+
+            //string title = "Clean Code";
+            //int pages = 464;
+
+            //string result = $"Book: {title}, Pages: {pages}";
+
+            //Console.WriteLine(result);
+
+            #endregion
+
+            #region Quistion 7 
+            //Build the same sentence again, but using string.Format().
+
+            //string title = "Clean Code";
+            //int pages = 464;
+
+            //string result = string.Format("Book: {0}, Pages: {1}", title, pages);
+
+            //Console.WriteLine(result);
+
+
+            #endregion
+
+            #region Quistion 8 
+            //Given int pages = 464;, write an if / else statement that prints "Long Book" if pages is greater than 
+            //300, otherwise prints "Short Book".
+
+            //int pages = 464;
+
+            //if (pages > 300)
+            //{
+            //    Console.WriteLine("Long Book");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Short Book");
+            //}
+
+            #endregion
+
+
+            #region Quistion 9
+            //Given int pages = 464; and bool isAvailable = true;, print "You can borrow this book" only if pages is 
+            //greater than 300 and isAvailable is true.Use the && operator.
+
+            //int pages = 464;
+            //bool isAvailable = true;
+
+            //if (pages > 300 && isAvailable == true)
+            //{
+            //    Console.WriteLine("You can borrow this book");
+            //}
+
+            #endregion
+
+            #region Quistion 10
+            //Given string title = "Refactoring";, write a switch statement that prints "Great choice!" if the title is 
+            //"Clean Code", "Nice pick!" if it's "Refactoring", and "Never heard of it" for anything else.
+
+            //string title = "Refactoring";
+
+            //switch (title)
+            //{
+            //    case "Clean Code":
+            //        Console.WriteLine("Great choice!");
+            //        break;
+
+            //    case "Refactoring":
+            //        Console.WriteLine("Nice pick!");
+            //        break;
+
+            //    default:
+            //        Console.WriteLine("Never heard of it");
+            //        break;
+            //}
+
+            #endregion
+
+            #region Quistion 11
+            //Given int pages = 464;, use the ternary operator to store "Long Book" or "Short Book" into a 
+            //variable sizeLabel(same rule as question 8: long if pages > 300).
+
+            //int pages = 464;
+
+            //string sizeLabel = pages > 300 ? "Long Book" : "Short Book";
+
+            //Console.WriteLine(sizeLabel);
+
+            #endregion
+
+            #region Quistion 12
+            //Given string[] books = { "Clean Code", "The Pragmatic Programmer", "Refactoring" };, use a for loop 
+            //to print each book with its position number, like 1.Clean Code.
+
+            //string[] books = { "Clean Code", "The Pragmatic Programmer", "Refactoring" };
+
+            //for (int i = 0; i < books.Length; i++)
+            //{
+            //    Console.WriteLine((i + 1) + ". " + books[i]);
+            //}
+
+
+            #endregion
+
+            #region Quistion 13
+
+            //Using the same books array, use a while loop to print every book title.
+
+            //string[] books = { "Clean Code", "The Pragmatic Programmer", "Refactoring" };
+
+            //int i = 0;
+
+            //while (i < books.Length)
+            //{
+            //    Console.WriteLine(books[i]);
+            //    i++;
+            //}
+
+            #endregion
+
+            #region Quistion 14
+            //Write a do-while loop that prints "Checking book..." exactly 3 times. 
+
+            //int i = 0;
+
+            //do
+            //{
+            //    Console.WriteLine("Checking book...");
+            //    i++;
+            //}
+            //while (i < 3);
+
+            #endregion
+
+            #region Quistion 15
+            //Using the same books array, use a foreach loop to print every book title.
+
+            //string[] books = { "Clean Code", "The Pragmatic Programmer", "Refactoring" };
+
+            //foreach (string book in books)
+            //{
+            //    Console.WriteLine(book);
+            //}
+
+            #endregion
+
+            #region Quistion 16
+            //Using the same books array, loop through it and print each title, but stop completely (break) once 
+            //you reach "Refactoring".
+
+            //string[] books = { "Clean Code", "The Pragmatic Programmer", "Refactoring" };
+
+            //foreach (string book in books)
+            //{
+            //    if (book == "Refactoring")
+            //    {
+            //        break;
+            //    }
+
+            //    Console.WriteLine(book);
+            //}
+
+            #endregion
+
+            #region Quistion 17
+            //Using the same books array, print every title except "The Pragmatic Programmer" (skip it with 
+            //continue, don't stop the loop).
+
+            //string[] books = { "Clean Code", "The Pragmatic Programmer", "Refactoring" };
+
+            //foreach (string book in books)
+            //{
+            //    if (book == "The Pragmatic Programmer")
+            //    {
+            //        continue;
+            //    }
+
+            //    Console.WriteLine(book);
+            //}
+
+
+            #endregion
+
+            #region Quistion 18
+            //Write a method PrintFirstBook() that prints the first book in the books array. If the array is empty, 
+            //use return to exit the method early instead of printing anything.
+
+            string[] books = { "Clean Code", "The Pragmatic Programmer", "Refactoring" };
+
+            void PrintFirstBook()
+            {
+                if (books.Length == 0)
+                {
+                    return;
+                }
+
+                Console.WriteLine(books[0]);
+            }
+
+            PrintFirstBook();
+
+            #endregion
+
+
+
+
+
+
         }
+
     }
 }
+
